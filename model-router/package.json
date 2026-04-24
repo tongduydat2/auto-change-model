@@ -1,0 +1,39 @@
+{
+  "name": "model-router",
+  "displayName": "Smart Model Router",
+  "description": "Intelligent per-subtask model routing for Antigravity",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "modelRouter.listModels",
+        "title": "Model Router: List Available Models"
+      },
+      {
+        "command": "modelRouter.switchModel",
+        "title": "Model Router: Switch Model"
+      },
+      {
+        "command": "modelRouter.restoreModel",
+        "title": "Model Router: Restore Original Model"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npx -y @vscode/vsce@latest package --no-dependencies",
+    "build": "npm run compile && npm run package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}

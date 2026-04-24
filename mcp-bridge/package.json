@@ -1,0 +1,13 @@
+{
+  "name": "model-router-mcp-bridge",
+  "version": "0.1.0",
+  "description": "MCP bridge that forwards tool calls to the Model Router VS Code extension",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
